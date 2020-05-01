@@ -3,7 +3,7 @@ let button = null;
 let countDiv = null;
 let button2 = null;
 let sequenceDiv2 = null;
-
+let sequenceTextInput = null;
 
 // Gets called on page load
 let onPageLoad = () => {
@@ -12,6 +12,7 @@ let onPageLoad = () => {
     countDiv = document.getElementById("count");
     button2 = document.getElementById("button2");
     sequenceDiv2 = document.getElementById("sequence");
+    sequenceTextInput = document.getElementById("sequenceText");
     // Set the button click event to run onButtonClick
     button.addEventListener("click", onButtonClick);
     button2.addEventListener("click", onButton2Click)
@@ -23,7 +24,17 @@ let onButtonClick = () => {
     countDiv.textContent = 'Yessah'
 }
 let onButton2Click = () => {
-    sequenceDiv2.textContent = 'To be done'
+    let totalRepeat = parseInt(sequenceTextInput.value);
+    let text="0       ";
+    let number1=BigInt(0);
+    let number2=BigInt(1);
+    for (let count = 1; count < totalRepeat; count+=1) {
+        let number3=number1+number2;
+        number1=number2;
+        number2=number3;
+        text += number3.toLocaleString()+"       ";
+    }
+    sequenceDiv2.textContent = text;
 }
 // On page load, run the onPageLoad function
 document.addEventListener("DOMContentLoaded", onPageLoad);
