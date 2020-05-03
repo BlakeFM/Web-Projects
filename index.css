@@ -1,6 +1,10 @@
 body{
     background: red;
 }
+#count1{
+display: inline;
+    white-space: pre-wrap;
+}
 #sequence{
    display:inline;
     white-space: pre-wrap;
