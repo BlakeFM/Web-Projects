@@ -1,25 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Beginning</title>
     <link rel="stylesheet" type="text/css" href="index.css"/>
     <script src="index.js"></script>
+    <script src="TabBar.js"></script>
+    <link rel="stylesheet" type="text/css" href="TabBar.css"/>
 </head>
 <body>
-<img height="450" src="Picture.jpg">
-<button id="button4">Add Image</button>
+
+<!-- Tab links -->
+<!-- London=Earth, Paris=Mars, Tokyo=Saturn-->
+<div class="tab">
+    <button class="tablinks" onclick="openCity(Event, 'Earth')">Earth</button>
+    <button class="tablinks" onclick="openCity(Event, 'Mars')">Mars</button>
+    <button class="tablinks" onclick="openCity(Event, 'Saturn')">Saturn</button>
+</div>
+
+<!-- Tab content -->
+<div id="Earth" class="tabcontent">
+    <h3>Earth</h3>
+    <p>Earth is the planet we live on. It is a planet we can breathe on. We like Earth!</p>
+</div>
+
+<div id="Mars" class="tabcontent">
+    <h3>Mars</h3>
+    <p>Mars is not the planet we live on. We want to live on but we can't because we can't breathe, duh.</p>
+</div>
+
+<div id="Saturn" class="tabcontent">
+    <h3>Saturn</h3>
+    <p>Saturn Big Planet!</p>
+</div>
+
+<button class="tablinks" onclick="openCity(event, 'Earth')" id="defaultOpen">Earth</button>
+
+<script>
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>
+<!-- Click on the <span> element to close the tab -->
+<div id="Earth" class="tabcontent">
+    <h3>Earth</h3>
+    <p>Earth is the planet we live on. It is a planet we can breathe on. We like Earth!</p>
+    <span onclick="this.parentElement.style.display='none'">x</span>
+</div>
+<!--______________________________________________-->
+
+<div id="ImageHolder">
+    <img height="450" src="Picture.jpg">
+</div>
+<button class="meep" id="button4">Add Image</button>
 <hr>
-<label id="countLabel" for="countText">count</label><input type="text" id="countText">
-<button id="button3">count</button>
-<div id="count1">Counting</div>
+<label class="blu" id="countLabel" for="countText">Count</label><input type="text" id="countText">
+<button class="meep" id="button3">Count</button>
+<div class="blu" id="count1">Counting</div>
 <hr>
-<label id="sequenceLabel" for="sequenceText">repeat</label><input type="text" id="sequenceText">
-<button id="button2">Seq.</button>
-<div id="sequence">Anything</div>
+<label class="blu" id="sequenceLabel" for="sequenceText">Repeat</label><input type="text" id="sequenceText">
+<button class="meep" id="button2">Seq.</button>
+<div class="blu" id="sequence">Anything</div>
 <hr>
-<button id="button1">Click Me :)</button>
-<div id="count">Nope</div>
+<button class="meep" id="button1">Click Me :)</button>
+<div class="blu" id="count">Nope</div>
 <hr>
 </body>
 </html>

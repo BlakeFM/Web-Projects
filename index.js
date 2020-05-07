@@ -23,6 +23,7 @@ let onPageLoad = () => {
     countTextInput = document.getElementById("countText")
     button4 = document.getElementById("button4")
 
+
     // Set the button click event to run onButtonClick
     button.addEventListener("click", onButtonClick);
     button2.addEventListener("click", onButton2Click)
@@ -35,8 +36,17 @@ let onButtonClick = () => {
     // Change the count div text
     countDiv.textContent = 'Yessah'
 }
+
 let onButton4Click = () => {
-    
+    //Creates the image
+    let img = document.createElement("img");
+    //Pulls the file
+    img.src = "Picture.jpg";
+    img.height = 450;
+    //Adds the image on click
+    let holder = document.getElementById("ImageHolder");
+    //appendChild is a function of holder/ A function
+    holder.appendChild(img);
 }
 
 let onButton2Click = () => {

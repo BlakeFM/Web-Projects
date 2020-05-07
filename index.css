@@ -1,5 +1,5 @@
 body{
-    background: red;
+    background: lightgray;
 }
 #count1{
 display: inline;
@@ -11,4 +11,12 @@ display: inline;
 }
 #sequenceLabel{
     padding-right: 10px;
+}
+.meep{
+    color: crimson;
+    font-weight: bold;
+}
+.blu{
+    color: darkred;
+    font-weight: bolder;
 }
