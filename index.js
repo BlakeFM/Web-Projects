@@ -52,8 +52,8 @@ let onButton4Click = () => {
 let onButton2Click = () => {
     let totalRepeat = parseInt(sequenceTextInput.value);
     let text = "0       ";
-    let number1 = BigInt(0);
-    let number2 = BigInt(1);
+    let number1 = bigInt(0);
+    let number2 = bigInt(1);
     for (let count = 1; count < totalRepeat; count += 1) {
         let number3 = number1 + number2;
         number1 = number2;
@@ -67,12 +67,12 @@ let onButton2Click = () => {
 let onButton3Click = () => {
     let Repeat = parseInt(countTextInput.value);
     let text = "0     ";
-    BigInt(0);
-    let number5 = BigInt(0);
+    bigInt(0);
+    let number5 = bigInt(0);
     for (let count = 1; count < Repeat + 1; count += 1) {
         let number6 ;
-        number6 = number5 + BigInt(1);
-        number5 = number5 + BigInt(1)
+        number6 = number5 + bigInt(1);
+        number5 = number5 + bigInt(1)
         text += number6.toLocaleString() + "     ";
     }
     countDiv2.textContent = text;
