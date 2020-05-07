@@ -8,6 +8,7 @@ let button3 = null;
 let countDiv2 = null;
 let countTextInput = null;
 let button4 = null;
+let babybutton = null;
 
 // Gets called on page load
 let onPageLoad = () => {
@@ -22,6 +23,7 @@ let onPageLoad = () => {
     countDiv2 = document.getElementById("count1");
     countTextInput = document.getElementById("countText")
     button4 = document.getElementById("button4")
+    babybutton = document.getElementById("babybutton")
 
 
     // Set the button click event to run onButtonClick
@@ -29,12 +31,21 @@ let onPageLoad = () => {
     button2.addEventListener("click", onButton2Click)
     button3.addEventListener("click", onButton3Click)
     button4.addEventListener("click", onButton4Click)
+    babybutton.addEventListener("click", onButton5Click)
 }
 
 // Gets called on button click
 let onButtonClick = () => {
     // Change the count div text
     countDiv.textContent = 'Yessah'
+}
+
+let onButton5Click = () => {
+    let gif = document.createElement("img");
+    gif.src = "baby.gif";
+    gif.height = 400;
+    let holder = document.getElementById("Image");
+    holder.appendChild(gif);
 }
 
 let onButton4Click = () => {
